@@ -199,7 +199,7 @@ function displayContent(Content_json)
         
     Html += '<div class="col s12">'
     
-    Html += '<div class="card horizontal">'
+    Html += '<div class="card horizontal z-depth-4">'
     
     Html += '<div class="card-image">'
     Html += '<img src="'+Content_json.jsonFormat[0].symbol+'">'
