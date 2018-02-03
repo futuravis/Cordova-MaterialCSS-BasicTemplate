@@ -1,12 +1,13 @@
 function displayHomePage()
 {
+    
     var symbolJSon = [
                       {"symbol":"img/Profile.png"},
                       {"symbol":"img/Settings.png"},
                       {"symbol":"img/Highlyrated.png"},
                       {"symbol":"img/MostPopular.png"},
-                      {"symbol":"img/MyLearning.png"},
-                      {"symbol":"img/Catalog.png"},
+                      {"symbol":"img/newlogo.png"},
+                      {"symbol":"img/registergreyn.png"},
                       {"symbol":"img/Analytics.png"},
                       {"symbol":"img/Myclasses.png"},
                       {"symbol":"img/My-Team.png"},
@@ -48,17 +49,56 @@ function displayHomePage()
                        ]
     }
     
-    var footerHtml = displayFooter(Footter_home_icons);
+    var json_Logo = {
+        "name": "Logo",
+        "symbol": symbolJSon[4].symbol,
+        "method": "",
+        "id":"footer_Popular_icon",
+    }
+    var json_Create = {
+        "name": "Create",
+        "symbol": symbolJSon[5].symbol,
+        "method": "",
+        "id":"footer_Popular_icon",
+    }
+
+    var header_home_icons = {
+        "jsonFormat": [
+                       json_Logo,
+                       json_Create,
+                       ]
+    }
+
+    
+    
+    var Html = '<form>';
+    Html += displayHeader(header_home_icons);
+
+    Html += '<div class="content">'
+    Html += '<h3>On Scroll Sticky Header</h3>'
+    Html += '<p>The header will stick to the top when you reach its scroll position.</p>'
+    Html += '<p>Scroll back up to remove the sticky effect.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>'
+    Html += '</div>'
+
+    Html += displayFooter(Footter_home_icons);
+    Html +='</form>';
+    
+    
     window.setTimeout(function() {
                       $('#login').empty();
-                      $('#login').append(footerHtml).trigger('create');
+                      $('#login').append(Html).trigger('create');
                       $('#login').css("display","block");
                       window.location.href = '#login';
                       }, 200);
 }
-
-
-
 
 
 
@@ -71,7 +111,6 @@ function displayFooter(Footter_home_icons)
 //    alert(JSON.stringify(Footter_home_icons.jsonFormat[0]))
 
     var html = "";
-    html += '<form>';
     html += '<div>';
     html += '<footer>'
     html += '<div class="row fixed_footer_row">'
@@ -85,12 +124,41 @@ function displayFooter(Footter_home_icons)
     }
     html += '</footer>'
     html += '</div>';
-    html +='</form>';
-    
     return html;
 }
 
 
+function displayHeader(header_home_icons)
+{
+    //alert(header_home_icons.jsonFormat[1].name)
+    var html = "";
+    html += '<div>'
+    html += '<div class="header home_header sticky_header" id="myHeader">'
+    html += '<div class="row">'
+    
+    //Create the add
+    html += '<div class="col s4">'
+    html += '<div class="row">'
+    
+    html += '<div class="col s8">'+header_home_icons.jsonFormat[1].name+'</div>'
+    html += '<div class="col s4">'
+    html += '<img class="fixed_footer_image" src="'+header_home_icons.jsonFormat[1].symbol+'">'
+    html += '</div>'
+    
+    html += '</div>'
+    html += '</div>'
+
+    
+    
+    html += '<div class="col s6">2</div>'
+    html += '<div class="col s2">3</div>'
+
+    
+    html += '</div>'
+    html += '</div>'
+    html += '</div>'
+    return html;
+}
 
 
 
