@@ -71,9 +71,9 @@
 }
 
 .fixed_sub_header_col {
-    padding: 0px !important;
+    padding: 5px !important;
     height: 40px;
-    background-color: #cacdce;
+    background-color: #EFEFEF;
 }
 
 .header_filter_img {

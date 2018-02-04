@@ -144,7 +144,7 @@ function displayHeader(header_home_icons)
     
     html += '<div class="row ">'
 
-    html += '<div class="col s10 right-align fixed_sub_header_col header_add_text">Filter'
+    html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
     html += '</div>'
 
     html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
