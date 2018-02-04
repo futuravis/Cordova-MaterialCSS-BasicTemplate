@@ -97,11 +97,36 @@ function displayHomePage()
     }
 
     
+    function CallhomeAPI(){
+        
+        $.ajax({
+               type : "POST",
+               crossDomain: true,
+               url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/ads/list",
+               beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
+                data: { "cat_id" : "21", "area_id" : "1"},
+               dataType: "json",
+               success : function(result) {
+               //alert(JSON.stringify(result))
+               //set your variable to the result
+               displayContent(result)
+               },
+               error : function(result) {
+               alert('failed')
+               //handle the error
+               }
+               });
+
+        
+        
+    }
+    
     
     var Html = '';
     Html += '<form>';
     Html += displayHeader(header_home_icons);
-    Html += displayContent(Content_json);
+    Html += CallhomeAPI()
+    Html += '<div id="homeList"></div>'
     Html += displayFooter(Footter_home_icons);
     Html += '</form>';
     
@@ -195,45 +220,30 @@ function displayContent(Content_json)
     Html += '<div class="content content_div">'
     
     
-    for(var j=0;j<Content_json.jsonFormat.length;j++){
-        
+    for(var j=0;j<Content_json.result.length;j++){
     Html += '<div class="col s12">'
-    
     Html += '<div class="card horizontal z-depth-4">'
-    
     Html += '<div class="card-image">'
-    Html += '<img src="'+Content_json.jsonFormat[0].symbol+'">'
+    Html += '<img style=" padding: 4px; margin-top: 2px" src="'+Content_json.result[j].image_url+'">'
     Html += '</div>'
-    
     Html += '<div class="card-stacked">'
     Html += '<div class="card-content">'
-    Html += '<p>'+Content_json.jsonFormat[0].details+'</p>'
+    Html += '<p>'+Content_json.result[j].title+'</p>'
     Html += '</div>'
-    
     Html += '<div class="card-action">'
-    Html += '<div class="section">'
-    Html += '<div>Price:'+Content_json.jsonFormat[0].price+'</div>'
-    Html += '<div>'+Content_json.jsonFormat[0].tag+'</div>'
-
-    Html += '</div>'
-
-    
+    Html += '<div>Price: '+Content_json.result[j].price+'</div>'
     Html += '</div>'
     Html += '</div>'
-
-    
-    
+    Html += '</div>'
     Html += '</div>'
     Html += '</div>'
     }
     
-    
-    
-    
-    
-    
     Html += '</div>'
-    return Html;
+    $('#homeList').html(Html)
+    
+    
+    //return Html;
 }
 
 
