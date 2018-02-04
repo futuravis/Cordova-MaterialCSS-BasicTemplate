@@ -231,7 +231,7 @@ function displayContent(Content_json)
     Html += '<p>'+Content_json.result[j].title+'</p>'
     Html += '</div>'
     Html += '<div class="card-action">'
-    Html += '<div>Price: '+Content_json.result[j].price+'</div>'
+    Html += '<div>Price: &#x20ba; '+Content_json.result[j].price+'</div>'
     Html += '</div>'
     Html += '</div>'
     Html += '</div>'
