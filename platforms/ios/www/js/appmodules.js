@@ -241,7 +241,6 @@ function displayContent(Content_json)
 
 
 function displayMyaccount(){
-    alert(11)
     
     slide_page('slide','myaccount')
 
@@ -260,7 +259,6 @@ function displayMyaccount(){
     
     html += '</div>'
     
-    alert(html)
 
     window.setTimeout(function() {
                       $('#myaccount').html(html)
