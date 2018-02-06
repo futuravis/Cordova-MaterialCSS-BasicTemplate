@@ -3,7 +3,6 @@ function displayLoginPage()
 {
 
     
-<<<<<<< HEAD
     var Html = '';
     
     Html += '<div class="row">'
@@ -23,7 +22,6 @@ function displayLoginPage()
     Html += '<input id="" type="text" placeholder="Placeholder">'
     Html += '</div>'
     Html += '</div>'
-=======
     var symbolJSon = [
                       {"symbol":"img/user.png"},
                       {"symbol":"img/search.png"},
@@ -85,7 +83,6 @@ function displayLoginPage()
         "tag":"Large appliances",
         "id":"footer_Add",
     }
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
 
     Html += '<div class="row">'
     Html += '<div class=" col s12 waves-effect waves-light login_button login_button_button_colour">'
@@ -181,13 +178,6 @@ function displayHomePage()
                //handle the error
                }
                });
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
-=======
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
     }
     
     var Html = '';
@@ -233,14 +223,6 @@ function displayHeader()
     html += '</div>'
     
     html += '</div>'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
-=======
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
     html += '<div class="row ">'
 
     html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
