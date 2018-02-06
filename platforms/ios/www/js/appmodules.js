@@ -148,8 +148,6 @@ function displayLoginPage()
                       }, 200);
 
     
-<<<<<<< HEAD
-=======
 }
 
 
@@ -181,7 +179,6 @@ function displayHomePage()
                }
                });
     }
->>>>>>> f1d59910f0e869b5523e8b88b86350d567552b5a
     
     var Html = '';
     Html += '<form>';
@@ -202,7 +199,6 @@ function displayHomePage()
                       }, 200);
 }
 
-<<<<<<< HEAD
 
 function CallhomeAPI(){
     
@@ -228,10 +224,7 @@ function CallhomeAPI(){
 
 
 
-function displayHeader(header_home_icons)
-=======
 function displayHeader()
->>>>>>> f1d59910f0e869b5523e8b88b86350d567552b5a
 {
     $('#myaccount').hide();
     var html = "";
