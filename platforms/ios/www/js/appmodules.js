@@ -184,6 +184,9 @@ function displayHomePage()
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
+=======
 >>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
     }
     
@@ -231,8 +234,11 @@ function displayHeader()
     
     html += '</div>'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
 =======
 >>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
     html += '<div class="row ">'
