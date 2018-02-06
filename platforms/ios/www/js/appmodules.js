@@ -14,7 +14,7 @@ function displayHomePage()
     var json_My_Account= {
         "name": "My Account",
         "symbol": symbolJSon[0].symbol,
-        "method": "",
+        "method": "displayMyaccount();",
         "id":"footer_My_Account",
     }
     var json_Search= {
@@ -104,7 +104,7 @@ function displayHomePage()
                crossDomain: true,
                url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/ads/list",
                beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
-                data: { "cat_id" : "21", "area_id" : "1"},
+                data: { "cat_id" : "0", "area_id" : "1"},
                dataType: "json",
                success : function(result) {
                //alert(JSON.stringify(result))
@@ -117,8 +117,6 @@ function displayHomePage()
                }
                });
 
-        
-        
     }
     
     
@@ -163,10 +161,6 @@ function displayHeader(header_home_icons)
     html += '</div>'
     
     html += '</div>'
-
-    
-    
-    
     html += '<div class="row ">'
 
     html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
@@ -238,7 +232,6 @@ function displayContent(Content_json)
     Html += '</div>'
     Html += '</div>'
     }
-    
     Html += '</div>'
     $('#homeList').html(Html)
     
@@ -246,6 +239,38 @@ function displayContent(Content_json)
     //return Html;
 }
 
+
+function displayMyaccount(){
+    alert(11)
+    
+    slide_page('slide','myaccount')
+
+    var html= '';
+    
+    var html = "";
+    html += '<div class="header home_header sticky_header" id="myHeader">'
+    html += '<div class="row fixed_header_row">'
+
+
+    
+    html += '</div>'
+    
+    
+    
+    
+    html += '</div>'
+    
+    alert(html)
+
+    window.setTimeout(function() {
+                      $('#myaccount').html(html)
+                      }, 200);
+
+    
+
+    
+    
+}
 
 
 

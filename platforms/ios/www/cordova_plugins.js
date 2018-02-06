@@ -39,7 +39,15 @@ module.exports = [
         "clobbers": [
             "window.StatusBar"
         ]
-    }
+    },
+                  {
+                  "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+                  "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+                  "pluginId": "com.telerik.plugins.nativepagetransitions",
+                  "clobbers": [
+                               "window.plugins.nativepagetransitions"
+                               ]
+                  }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
