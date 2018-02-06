@@ -12,6 +12,8 @@ var symbolJSon = [
 var json_My_Account= {
     "name": "My Account",
     "symbol": symbolJSon[0].symbol,
+    "method": "",
+    "method": "displayMyaccount();",
     "method": "displayMyaccount();",
     "id":"footer_My_Account",
 }
@@ -60,3 +62,34 @@ var json_Card = {
     "tag":"Large appliances",
     "id":"footer_Add",
 }
+
+
+var header_home_icons = {
+    "jsonFormat": [
+                   json_Logo,
+                   json_Add,
+                   json_Filter,
+                   ]
+}
+
+var Footter_home_icons = {
+    "jsonFormat": [
+                   json_Home,
+                   json_Categories,
+                   json_Search,
+                   json_My_Account,
+                   ]
+}
+
+var Content_json = {
+    "jsonFormat": [
+                   json_Card,
+                   json_Card,
+                   json_Card,
+                   json_Card,
+                   json_Card,
+                   json_Card,
+                   
+                   ]
+}
+
