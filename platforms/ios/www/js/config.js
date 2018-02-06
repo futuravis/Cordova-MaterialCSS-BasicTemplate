@@ -30,7 +30,7 @@ var json_Categories= {
 var json_Home= {
     "name": "Home",
     "symbol": symbolJSon[3].symbol,
-    "method": "",
+    "method": "displayHomePage();",
     "id":"footer_Home",
 }
 var json_Logo = {

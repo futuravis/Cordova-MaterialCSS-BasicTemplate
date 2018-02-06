@@ -94,3 +94,42 @@
 .content_div{
     margin-top: 100px;
 }
+
+.header_text{
+    position: absolute;
+    margin-left: 10px;
+    top: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+
+.profile_div{
+    height: 300px;
+    border: 1px solid #c00c1a;
+    background: red;
+    background: linear-gradient(#c00c1a, #c46f77);
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%
+}
+
+.profile_img{
+    border: 3px solid #FFFFFF;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 100%;
+    
+
+}
+
+.profile_name{
+    text-align: center ;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+    
+
+}

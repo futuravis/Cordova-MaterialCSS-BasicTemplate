@@ -66,3 +66,23 @@ function slide_page(dir,page,noslide) {
     
     
 }
+
+
+function backHeader(text,prevpage){
+    var html = "";
+    html += '<div class="header home_header sticky_header" id="myHeader">'
+    html += '<div onclick="goBack(\''+prevpage+'\')" style=" text-align: left !important; margin-top: 15px; margin-left: 10px"><img src="img/back_arrow.png" width="30"/><span class="header_text">'+text+'</span></div>'
+    html += '<div class="row fixed_header_row">'
+    html += '</div>'
+    html += '</div>'
+    return html;
+
+
+}
+
+function goBack(page){
+    //alert(page)
+    slide_page('slide',page);
+    displayHomePage();
+}
+

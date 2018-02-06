@@ -97,27 +97,6 @@ function displayHomePage()
     }
 
     
-    function CallhomeAPI(){
-        
-        $.ajax({
-               type : "POST",
-               crossDomain: true,
-               url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/ads/list",
-               beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
-                data: { "cat_id" : "0", "area_id" : "1"},
-               dataType: "json",
-               success : function(result) {
-               //alert(JSON.stringify(result))
-               //set your variable to the result
-               displayContent(result)
-               },
-               error : function(result) {
-               alert('failed')
-               //handle the error
-               }
-               });
-
-    }
     
     
     var Html = '';
@@ -137,8 +116,34 @@ function displayHomePage()
                       }, 200);
 }
 
+
+function CallhomeAPI(){
+    
+    $.ajax({
+           type : "POST",
+           crossDomain: true,
+           url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/ads/list",
+           beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
+           data: { "cat_id" : "0", "area_id" : "1"},
+           dataType: "json",
+           success : function(result) {
+           //alert(JSON.stringify(result))
+           //set your variable to the result
+           displayContent(result)
+           },
+           error : function(result) {
+           console.log("call Failed");
+           //handle the error
+           }
+           });
+    
+}
+
+
+
 function displayHeader(header_home_icons)
 {
+    $('#myaccount').hide();
     var html = "";
     html += '<div class="header home_header sticky_header" id="myHeader">'
     html += '<div class="row fixed_header_row">'
@@ -210,6 +215,7 @@ function displayFooter(Footter_home_icons)
 
 function displayContent(Content_json)
 {
+    $('#home').show();
     var Html = "";
     Html += '<div class="content content_div">'
     
@@ -241,25 +247,19 @@ function displayContent(Content_json)
 
 
 function displayMyaccount(){
-    
-    slide_page('slide','myaccount')
+    $('#home').hide();
+    $('#myaccount').show();
+
+    slide_page('front','myaccount')
 
     var html= '';
-    
-    var html = "";
-    html += '<div class="header home_header sticky_header" id="myHeader">'
-    html += '<div class="row fixed_header_row">'
+    html+= backHeader('My Account','home');
 
-
+    html += '<div class="profile_div">'
+    html += '<div class="profile_img"><img src="img/man.png" width="140" style=" margin:3px 3px 2px 3px"/></div>'
+    html += '<div class="profile_name">Ashutosh Mishra</div>'
+    html +='</div>'
     
-    html += '</div>'
-    
-    
-    
-    
-    html += '</div>'
-    
-
     window.setTimeout(function() {
                       $('#myaccount').html(html)
                       }, 200);
