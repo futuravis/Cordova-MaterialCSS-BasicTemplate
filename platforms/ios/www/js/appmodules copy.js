@@ -3,8 +3,8 @@ function displayLoginPage()
 {
 
     
-<<<<<<< HEAD
     var Html = '';
+    
     
     Html += '<div class="row">'
     Html += '<div class="col s12">'
@@ -12,6 +12,7 @@ function displayLoginPage()
     Html += '<div class="card-stacked">'
     Html += '<div class="card-action">'
     
+    
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
     Html += '<input id="" type="text" placeholder="Placeholder">'
@@ -23,85 +24,14 @@ function displayLoginPage()
     Html += '<input id="" type="text" placeholder="Placeholder">'
     Html += '</div>'
     Html += '</div>'
-=======
-    var symbolJSon = [
-                      {"symbol":"img/user.png"},
-                      {"symbol":"img/search.png"},
-                      {"symbol":"img/Categories.png"},
-                      {"symbol":"img/home.png"},
-                      {"symbol":"img/logo.png"},
-                      {"symbol":"img/add.png"},
-                      {"symbol":"img/filter.png"},
-                      {"symbol":"img/card_img.jpeg"},
-                      ];
-    var json_My_Account= {
-        "name": "My Account",
-        "symbol": symbolJSon[0].symbol,
-        "method": "displayMyaccount();",
-        "id":"footer_My_Account",
-    }
-    var json_Search= {
-        "name": "Search",
-        "symbol": symbolJSon[1].symbol,
-        "method": "",
-        "id":"footer_Search",
-    }
-    var json_Categories= {
-        "name": "Categories",
-        "symbol": symbolJSon[2].symbol,
-        "method": "",
-        "id":"footer_Categories",
-    }
-    var json_Home= {
-        "name": "Home",
-        "symbol": symbolJSon[3].symbol,
-        "method": "",
-        "id":"footer_Home",
-    }
-    var json_Logo = {
-        "name": "Logo",
-        "symbol": symbolJSon[4].symbol,
-        "method": "",
-        "id":"header_Logo",
-    }
-    var json_Add = {
-        "name": "Add",
-        "symbol": symbolJSon[5].symbol,
-        "method": "",
-        "id":"header_Add",
-    }
-    var json_Filter = {
-        "name": "Filter",
-        "symbol": symbolJSon[6].symbol,
-        "method": "",
-        "id":"header_Filter",
-    }
-    var json_Card = {
-        "name": "Card",
-        "symbol": symbolJSon[7].symbol,
-        "method": "",
-        "details":"I am a very simple card. I am good at containing small bits of information.",
-        "price":"$1000",
-        "tag":"Large appliances",
-        "id":"footer_Add",
-    }
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
 
     Html += '<div class="row">'
-    Html += '<div class=" col s12 waves-effect waves-light login_button login_button_button_colour">'
+    Html += '<div class="input-field col s12 waves-effect waves-light deep-orange accent-3">'
     Html += '<div class="row">Login</div>'
     Html += '</div>'
     Html += '</div>'
 
-    Html += '<div class="row">'
-    Html += '<div class=" col s6 remember_me_text">'
-    Html += '<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />'
-    Html += '<label for="filled-in-box">Remember Me</label>'
-    Html += '</div>'
-    Html += '<div class=" col s6 forgot_password_text">I forgot my password!'
-    Html += '</div>'
-    Html += '</div>'
-
+    
     
     Html += '</div>'
     Html += '</div>'
@@ -110,35 +40,6 @@ function displayLoginPage()
     Html += '</div>'
 
     
-    
-    
-    
-    Html += '<div class="row">'
-    Html += '<div class="col s12">'
-    Html += '<div class="card horizontal z-depth-4">'
-    Html += '<div class="card-stacked">'
-    Html += '<div class="card-action">'
-    
-    
-    Html += '<div class="row">'
-    Html += '<div class=" col s12">'
-    Html += '<label>Not a member yet ?</label>'
-    Html += '</div>'
-    Html += '</div>'
-
-    Html += '<div class="row ">'
-    Html += '<div class=" col s12 waves-effect waves-light login_button memeber_now_button_colour ">'
-    Html += '<div class="row">Member Now</div>'
-    Html += '</div>'
-    Html += '</div>'
-    
-    Html += '</div>'
-    Html += '</div>'
-    Html += '</div>'
-    Html += '</div>'
-    Html += '</div>'
-
-
     
     
     
@@ -169,7 +70,7 @@ function displayHomePage()
                crossDomain: true,
                url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/ads/list",
                beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
-                data: { "cat_id" : "0", "area_id" : "1"},
+                data: { "cat_id" : "21", "area_id" : "1"},
                dataType: "json",
                success : function(result) {
                //alert(JSON.stringify(result))
@@ -181,10 +82,6 @@ function displayHomePage()
                //handle the error
                }
                });
-<<<<<<< HEAD
-=======
-
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
     }
     
     var Html = '';
@@ -230,11 +127,8 @@ function displayHeader()
     html += '</div>'
     
     html += '</div>'
-<<<<<<< HEAD
 
 
-=======
->>>>>>> ff311fb0b20bb15a617b6e23e3fdc538ee08eff8
     html += '<div class="row ">'
 
     html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
@@ -306,6 +200,7 @@ function displayContent(Content_json)
     Html += '</div>'
     Html += '</div>'
     }
+    
     Html += '</div>'
     $('#homeList').html(Html)
     
@@ -313,36 +208,6 @@ function displayContent(Content_json)
     //return Html;
 }
 
-
-function displayMyaccount(){
-    
-    slide_page('slide','myaccount')
-
-    var html= '';
-    
-    var html = "";
-    html += '<div class="header home_header sticky_header" id="myHeader">'
-    html += '<div class="row fixed_header_row">'
-
-
-    
-    html += '</div>'
-    
-    
-    
-    
-    html += '</div>'
-    
-
-    window.setTimeout(function() {
-                      $('#myaccount').html(html)
-                      }, 200);
-
-    
-
-    
-    
-}
 
 
 
