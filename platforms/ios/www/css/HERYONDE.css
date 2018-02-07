@@ -175,3 +175,10 @@
     
 
 }
+
+.profile_logout{
+    width: 50px;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+}

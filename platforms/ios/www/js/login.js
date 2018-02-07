@@ -237,8 +237,9 @@ function CallloginAPI(email,password){
            data: { "username" : email, "password" : password},
            dataType: "json",
            success : function(result) {
-           alert(JSON.stringify(result))
+           //alert(JSON.stringify(result))
            if(result.status == true){
+             Materialize.toast('Login Success', 3000, 'rounded') 
            localStorage.setItem("userid", result.user_id);
            slide_page('front','home')
            displayHomePage();
