@@ -47,7 +47,7 @@ function displayMyaccounset(result){
     html+= backHeader('My Account','home');
     
     html += '<div class="profile_div">'
-    html += '<div class="profile_img"><img src="img/man.png" width="140" style=" margin:3px 3px 2px 3px"/></div>'
+    html += '<div class="profile_img"><img src="img/man.png" width="120" style=" margin:3px 3px 2px 3px"/></div>'
     html += '<div class="profile_name">'+result.info.username+'</div>'
     html +='</div>'
     
