@@ -49,7 +49,7 @@ function displayLoginPage(Prev_page)
     
     Html += '<div class="row">'
     Html += '<div class=" col s12 waves-effect waves-light login_button login_button_button_colour">'
-    Html += '<div class="row">Login</div>'
+    Html += '<div class="row" onclick="displayHomePage()">Login</div>'
     Html += '</div>'
     Html += '</div>'
     

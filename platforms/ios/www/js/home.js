@@ -45,6 +45,7 @@ function CallhomeAPI(){
 function displayHeader()
 {
     $('#myaccount').hide();
+    $('#login').hide();
     var html = "";
     html += '<div class="header home_header sticky_header" id="myHeader">'
     html += '<div class="row fixed_header_row">'
