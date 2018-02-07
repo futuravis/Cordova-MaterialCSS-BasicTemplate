@@ -37,19 +37,19 @@ function displayLoginPage(Prev_page)
     
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="" type="text" placeholder="Email/Username">'
+    Html += '<input id="email" type="text" placeholder="Email/Username">'
     Html += '</div>'
     Html += '</div>'
     
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="" type="text" placeholder="Password">'
+    Html += '<input id="password" type="text" placeholder="Password">'
     Html += '</div>'
     Html += '</div>'
     
     Html += '<div class="row">'
     Html += '<div class=" col s12 waves-effect waves-light login_button login_button_button_colour">'
-    Html += '<div class="row" onclick="displayHomePage()">Login</div>'
+    Html += '<div class="row" onclick="checkvalidation();">Login</div>'
     Html += '</div>'
     Html += '</div>'
     
@@ -215,10 +215,44 @@ function displayregisterpage(){
 
 
 
+function checkvalidation(){
+    
+    var email = $('#email').val()
+    var password= $('#password').val()
+    
+    CallloginAPI(email,password)
+ 
+    
+}
 
 
 
 
+function CallloginAPI(email,password){
+    $.ajax({
+           type : "POST",
+           crossDomain: true,
+           url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/users/login",
+           beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
+           data: { "username" : email, "password" : password},
+           dataType: "json",
+           success : function(result) {
+           alert(JSON.stringify(result))
+           if(result.status == true){
+           localStorage.setItem("userid", result.user_id);
+           slide_page('front','home')
+           displayHomePage();
+           }
+           //set your variable to the result
+           //displayContent(result)
+           },
+           error : function(result) {
+           console.log("call Failed");
+           //handle the error
+           }
+           });
+    
+}
 
 
 

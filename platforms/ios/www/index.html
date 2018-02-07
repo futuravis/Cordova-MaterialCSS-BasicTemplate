@@ -29,8 +29,14 @@
         document.addEventListener("deviceready", onDeviceReady, false);
         
         function onDeviceReady(){
-            //displayHomePage();
-           displayLoginPage();
+            
+            var userId = localStorage.getItem("userid");
+            if(userId > 0){
+               displayHomePage();
+            }else{
+                displayLoginPage();
+            }
+            
         }
 
         </script>
