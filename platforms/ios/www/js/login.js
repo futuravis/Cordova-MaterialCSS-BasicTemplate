@@ -217,8 +217,13 @@ function displayregisterpage(){
 function checkvalidation(){
     var email = $('#email').val()
     var password= $('#password').val()
-    CallloginAPI(email,password)
-}
+    if(email == ""){
+        Materialize.toast('Please enter your username', 2000)
+    }else if(password == ""){
+        Materialize.toast('Please enter your password', 2000)
+    }else{
+        CallloginAPI(email,password)
+    }}
 
 function CallloginAPI(email,password){
     $.ajax({
@@ -235,6 +240,8 @@ function CallloginAPI(email,password){
            localStorage.setItem("userid", result.user_id);
            slide_page('front','home')
            displayHomePage();
+           }else{
+           Materialize.toast('Login Failed', 2000)
            }
            //set your variable to the result
            //displayContent(result)
