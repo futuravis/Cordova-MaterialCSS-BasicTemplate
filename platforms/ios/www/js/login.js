@@ -43,7 +43,7 @@ function displayLoginPage(Prev_page)
     
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="password" type="text" placeholder="Password">'
+    Html += '<input id="password" type="password" placeholder="Password">'
     Html += '</div>'
     Html += '</div>'
     
@@ -154,7 +154,7 @@ function displayregisterpage(){
  
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="register_Password" type="text" placeholder="Password">'
+    Html += '<input id="register_Password" type="password" placeholder="Password">'
     Html += '</div>'
     Html += '</div>'
 
@@ -283,7 +283,7 @@ function CallRegisterAPI(username,password,email,contact){
            crossDomain: true,
            url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/users/register",
            beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
-           data: { "username" : email, "password" : password, "email" : password, "contact" : password},
+           data: { "username" : username, "password" : password, "email" : email, "contact" : contact},
            dataType: "json",
            success : function(result) {
            //alert(JSON.stringify(result))
