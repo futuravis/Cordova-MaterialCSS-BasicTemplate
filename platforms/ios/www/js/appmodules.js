@@ -66,7 +66,9 @@ function doLogout(){
     clearpage();
     localStorage.removeItem("userid");
     slide_page('front','login')
+    displayLoginPage()
     $('#login').show();
+    
 }
 
 function clearpage(){
