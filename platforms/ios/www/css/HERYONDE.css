@@ -173,6 +173,18 @@
     margin-top: 20px;
     font-size: 18px;
     color: #FFFFFF;
-    
-
 }
+
+
+
+.display_none{
+    display:none;
+}
+
+.font_size_14{
+    font-size: 14px !important;
+}
+
+
+
+
