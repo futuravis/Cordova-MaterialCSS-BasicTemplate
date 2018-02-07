@@ -172,13 +172,27 @@
     margin-top: 5px;
     font-size: 18px;
     color: #FFFFFF;
-    
-
 }
 
+
+
+.display_none{
+    display:none;
+}
+
+.font_size_14{
+    font-size: 14px !important;
+}
+
+<<<<<<< HEAD
+
+
+
+=======
 .profile_logout{
     width: 50px;
     position: absolute;
     right: 20px;
     top: 18px;
 }
+>>>>>>> 8e267813d7e83ebf1c2378efaae098cd754caae7
