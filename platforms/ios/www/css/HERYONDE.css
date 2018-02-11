@@ -193,8 +193,14 @@
 .App_color{
     background-color: #c00c1a !important;
 }
+.App_text_color{
+    color: #c00c1a !important;
+}
 .font_size_14{
     font-size: 14px !important;
+}
+.font_size_16{
+    font-size: 16px !important;
 }
 .display_none{
     display:none;
@@ -202,12 +208,21 @@
 .Header_Top{
 margin-top: 70px;
 }
+.Bold_text{
+    font-weight: bold;
+}
 
 
 
 
 
 
+.filter_modle_content{
+    padding: 0px !important;
+}
+.filter_modle{
+    max-height: 60% !important;
+}
 
 
 
