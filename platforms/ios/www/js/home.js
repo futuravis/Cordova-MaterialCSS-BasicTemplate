@@ -78,6 +78,8 @@ function displayHeader()
     //html += '<img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'">'
     
     html += 'test'
+    html += '<a class="waves-effect waves-light  modal-trigger" href="#modal1">'
+    html += '<a class="waves-effect modal-trigger" href="#modal1"><img onclick="openRefine" class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
     html += '</a>'
     html += displayfiltermodel();
     html += '</div>'
@@ -146,7 +148,8 @@ function displayContent(Content_json)
         Html += '</div>'
     }
     Html += '</div>'
-    $('#homeList').html(Html)
+    $('#homeList').html(Html);
+    $('.modal').modal();
     
     
     //return Html;
@@ -172,6 +175,11 @@ function displayfiltermodel()
 function openfiltermodel(){
     $('#modal1').modal('open');
 }
+function openRefine(){
+    alert(12)
+    
+}
+
 
 
 
