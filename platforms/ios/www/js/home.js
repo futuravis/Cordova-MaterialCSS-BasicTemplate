@@ -74,12 +74,15 @@ function displayHeader()
     html += '</div>'
     
     html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
+    html += '<a class="waves-effect waves-light  modal-trigger" href="#modal1">'
     html += '<img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'">'
+    html += '</a>'
+    html += displayfiltermodel();
     html += '</div>'
     
     html += '</div>'
     
-    
+
     
     
     html += '</div>'
@@ -146,3 +149,29 @@ function displayContent(Content_json)
     
     //return Html;
 }
+
+
+function displayfiltermodel()
+{
+    var Html = "";
+    Html += '<div id="modal1" class="modal">'
+    Html += '<div class="modal-content">'
+    Html += '<h4>Modal Header</h4>'
+    Html += '<p>A bunch of text</p>'
+    Html += '</div>'
+    Html += '<div class="modal-footer">'
+    Html += '<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>'
+    Html += '</div>'
+    Html += '</div>'
+    return Html;
+}
+
+
+
+
+
+
+
+
+
+

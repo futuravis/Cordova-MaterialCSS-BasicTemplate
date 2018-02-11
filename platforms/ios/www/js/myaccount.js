@@ -1,23 +1,13 @@
 function displayMyaccount(){
     $('#home').hide();
     $('#myaccount').show();
-    
     slide_page('front','myaccount')
-    
     callProfileApi()
-    
-   
-    
-    
-    
-    
-    
 }
 
 function callProfileApi(){
  
     var userId = localStorage.getItem("userid");
-
     
     $.ajax({
            type : "GET",
@@ -40,8 +30,6 @@ function callProfileApi(){
 }
 
 function displayMyaccounset(result){
-    
-   // alert(JSON.stringify(result))
     
     var html= '';
     html+= backHeader('My Account','home');
@@ -92,11 +80,89 @@ function displayMyaccounset(result){
     html += '</div>'
     html += '</div>'
     
+    html += '<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">'
+    html += '<a class="btn btn-floating btn-large App_color waves-effect waves-light" onclick="displayeditprofile()">'
+    html += '<i class="material-icons "><img class="profile_edit_img" src="img/edit.png" /></i>'
+    html += '</a>'
+    html += '</div>'
+
     window.setTimeout(function() {
                       $('#myaccount').html(html)
                       }, 200);
 
 }
+
+
+
+
+
+
+function displayeditprofile(){
+    $('#myaccount').hide();
+    $('#editprofile').show();
+    slide_page('front','editprofile')
+
+    var Html= '';
+    Html+= backHeader('Edit Profile','myaccount');
+    
+    //Login card
+    Html += '<div class="row Header_Top">'
+    Html += '<div class="col s12">'
+    Html += '<div class="card horizontal z-depth-4">'
+    Html += '<div class="card-stacked">'
+    Html += '<div class="card-action">'
+    
+    
+    Html += '<div class="row">'
+    Html += '<div class="input-field col s12">'
+    Html += '<input id="register_username" type="text" placeholder="username">'
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '<div class="row">'
+    Html += '<div class="input-field col s12">'
+    Html += '<input id="register_email" type="text" placeholder="Email">'
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '<div class="row">'
+    Html += '<div class="input-field col s12">'
+    Html += '<input id="register_Password" type="password" placeholder="Password">'
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '<div class="row">'
+    Html += '<div class="input-field col s12">'
+    Html += '<input id="register_contact" type="text" placeholder="contact">'
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '<div class="row" onclick="UpdateAccount();">'
+    Html += '<div class=" col s12 waves-effect waves-light login_button login_button_button_colour ">'
+    Html += '<div class="row">Update</div>'
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</div>'
+    Html += '</div>'
+    Html += '</div>'
+    Html += '</div>'
+    
+    
+    window.setTimeout(function() {
+                      $('#editprofile').html(Html)
+                      }, 200);
+}
+
+
+
+
+function UpdateAccount(){
+    
+
+}
+
 
 
 
