@@ -74,8 +74,10 @@ function displayHeader()
     html += '</div>'
     
     html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
-    html += '<a class="waves-effect waves-light  modal-trigger" href="#modal1">'
-    html += '<img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'">'
+    html += '<a class="waves-effect waves-light  modal-trigger" onclick="openfiltermodel()">'
+    //html += '<img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'">'
+    
+    html += 'test'
     html += '</a>'
     html += displayfiltermodel();
     html += '</div>'
@@ -167,7 +169,9 @@ function displayfiltermodel()
 }
 
 
-
+function openfiltermodel(){
+    $('#modal1').modal('open');
+}
 
 
 
