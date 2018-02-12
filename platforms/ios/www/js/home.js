@@ -32,16 +32,10 @@ function displayHomePage()
                                         }
                                         );
                       $('.collapsible').collapsible();
+                      $('ul.tabs').tabs();
+                      
 
 
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       
                       
                       
@@ -184,25 +178,32 @@ function displayContent(Content_json)
 function displayfiltermodel()
 {
     var Html = "";
+    
+    //Header model
     Html += '<div class="modal-footer ">'
     Html += '<a href="#!" class="modal-action modal-close waves-effect font_size_16 App_text_color Bold_text btn-flat ">Apply</a>'
     Html += '</div>'
     
+    
+    
+    
     Html += '<div class="modal-content filter_modle_content">'
-    
     Html += '<ul class="collapsible" data-collapsible="accordion">'
-    Html += '<li>'
-    Html += '<div class="collapsible-header">Sort by</div>'
-    Html += '<div class="collapsible-body">'
+
+    Html +=  displayToggleOption();
+    Html +=  displayRadioOption();
+    Html +=  displayCheckboxOption();
+    Html +=  displaySwitchOption();
+    Html +=  displaysliderOption();
+
     
-    Html += '</div>'
-    Html += '</li>'
     Html += '<li>'
     Html += '<div class="collapsible-header">Third</div>'
     Html += '<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>'
     Html += '</li>'
+    
+    
     Html += '</ul>'
-
     Html += '</div>'
     
     return Html;
@@ -210,8 +211,138 @@ function displayfiltermodel()
 
 
 
+function displayToggleOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="selecttoggle()" >Sort by</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    Html += '<ul class="tabs refine_Sort_by">'
+    Html += '<li  class="tab col s6"><a id="Newly_added" >Newly added</a></li>'
+    Html += '<li  class="tab col s6"><a id="Alphabatically">Alphabatically</a></li>'
+    Html += '</ul>'
+    Html += '</div>'
+    Html += '</div>'
+
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+
+}
+
+function displayRadioOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="" >radio options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<p>'
+    Html += '<input class="with-gap" name="group1" type="radio" id="test1" />'
+    Html += '<label for="test1">Red</label>'
+    Html += '</p>'
+    
+    Html += '<p>'
+    Html += '<input class="with-gap" name="group1" type="radio" id="test2" />'
+    Html += '<label for="test2">Yellow</label>'
+    Html += '</p>'
+    
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
 
 
 
+
+function displayCheckboxOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="" >checkbox options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<p>'
+    Html += '<input type="checkbox" id="test5" />'
+    Html += '<label for="test5">Red</label>'
+    Html += '</p>'
+    Html += '<p>'
+    Html += '<input type="checkbox" id="test6" checked="checked" />'
+    Html += '<label for="test6">Yellow</label>'
+    Html += '</p>'
+
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
+
+
+function displaySwitchOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="" >switch options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<div class="switch">'
+    Html += '<label>'
+    Html += 'Off'
+    Html += '<input type="checkbox">'
+    Html += '<span class="lever"></span>'
+    Html += 'On'
+    Html += '</label>'
+    Html += '</div>'
+
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
+
+
+
+function displaysliderOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="noUiSlider()" >radio options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<div id="test-slider"></div>'
+
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
 
 

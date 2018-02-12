@@ -158,10 +158,6 @@ function displayeditprofile(){
 
 
 
-function UpdateAccount(){
-    
-
-}
 
 
 
