@@ -12,10 +12,10 @@
         <link rel="stylesheet" type="text/css" href="css/HERYONDE.css">
 
         <!--Adding the js files -->
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="jquery.mobile-1.1.0/jquery-2.0.0.min.js"></script>
-        <script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+<!--        <script type="text/javascript" src="jquery.mobile-1.1.0/jquery-2.0.0.min.js"></script>-->
+        <script type="text/javascript" src="jquery/jquery.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript" src='js/config.js'></script>
         <script type="text/javascript" src='js/appmodules.js'></script>
@@ -29,7 +29,6 @@
         document.addEventListener("deviceready", onDeviceReady, false);
         
         function onDeviceReady(){
-            
             var userId = localStorage.getItem("userid");
             if(userId > 0){
                displayHomePage();
@@ -48,20 +47,8 @@
         <div id="home" class="home page_roll" ></div>
         <div id="myaccount" class="myaccount page_roll" ></div>
         <div id="editprofile" class="editprofile page_roll" ></div>
+        <div id="Refinemodel" class="modal bottom-sheet filter_modle"></div>
 
-
-<!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>-->
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet">
-    <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-</div>
 
     </body>
     

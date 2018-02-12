@@ -8,8 +8,43 @@ function displayHomePage()
     Html += '</form>';
     
     CallhomeAPI();
+    
+    var filter_model_html = "";
+    filter_model_html = displayfiltermodel();
 
     window.setTimeout(function() {
+                      $('#Refinemodel').html(filter_model_html);
+                      $('.modal').modal({
+                                        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                                        opacity: .5, // Opacity of modal background
+                                        inDuration: 300, // Transition in duration
+                                        outDuration: 200, // Transition out duration
+                                        startingTop: '4%', // Starting top style attribute
+                                        endingTop: '100%', // Ending top style attribute
+                                        ready: function(modal, trigger)
+                                        {
+                                        //alert("Ready");
+                                        },
+                                        complete: function()
+                                        {
+                                        //alert('Closed');
+                                        }
+                                        }
+                                        );
+                      $('.collapsible').collapsible();
+
+
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                       $('#home').empty();
                       $('#home').append(Html).trigger('create');
                       $('#home').css("display","block");
@@ -73,18 +108,13 @@ function displayHeader()
     html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
     html += '</div>'
     
+    
     html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
-    html += '<a class="waves-effect waves-light  modal-trigger" href="#modal1">'
-    html += '<a class="waves-effect modal-trigger" href="#modal1"><img onclick="openRefine" class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
-    html += '</a>'
-    html += displayfiltermodel();
+    html += '<a class="waves-effect modal-trigger" href="#Refinemodel"><img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
     html += '</div>'
     
+    
     html += '</div>'
-    
-
-    
-    
     html += '</div>'
     return html;
 }
@@ -145,7 +175,6 @@ function displayContent(Content_json)
     }
     Html += '</div>'
     $('#homeList').html(Html);
-    $('.modal').modal();
     
     
     //return Html;
@@ -155,21 +184,28 @@ function displayContent(Content_json)
 function displayfiltermodel()
 {
     var Html = "";
-    Html += '<div id="modal1" class="modal">'
-    Html += '<div class="modal-content">'
-    Html += '<h4>Modal Header</h4>'
-    Html += '<p>A bunch of text</p>'
+    Html += '<div class="modal-footer ">'
+    Html += '<a href="#!" class="modal-action modal-close waves-effect font_size_16 App_text_color Bold_text btn-flat ">Apply</a>'
     Html += '</div>'
-    Html += '<div class="modal-footer">'
-    Html += '<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>'
-    Html += '</div>'
-    Html += '</div>'
-    return Html;
-}
-
-function openRefine(){
-    alert(12)
     
+    Html += '<div class="modal-content filter_modle_content">'
+    
+    Html += '<ul class="collapsible" data-collapsible="accordion">'
+    Html += '<li>'
+    Html += '<div class="collapsible-header">Sort by</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '</div>'
+    Html += '</li>'
+    Html += '<li>'
+    Html += '<div class="collapsible-header">Third</div>'
+    Html += '<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>'
+    Html += '</li>'
+    Html += '</ul>'
+
+    Html += '</div>'
+    
+    return Html;
 }
 
 
