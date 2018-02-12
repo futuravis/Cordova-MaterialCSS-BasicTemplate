@@ -81,7 +81,7 @@ function displayMyaccounset(result){
     html += '</div>'
     
     html += '<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">'
-    html += '<a class="btn btn-floating btn-large App_color waves-effect waves-light" onclick="displayeditprofile()">'
+    html += '<a class="btn btn-floating btn-large App_color waves-effect waves-light" onclick="displayeditprofile("'+result.info.email+'","'+result.info.contact+'")">'
     html += '<i class="material-icons "><img class="profile_edit_img" src="img/edit.png" /></i>'
     html += '</a>'
     html += '</div>'
@@ -97,11 +97,10 @@ function displayMyaccounset(result){
 
 
 
-function displayeditprofile(){
+function displayeditprofile(email,conytact){
     $('#myaccount').hide();
     $('#editprofile').show();
     slide_page('front','editprofile')
-
     var Html= '';
     Html+= backHeader('Edit Profile','myaccount');
     
@@ -121,7 +120,7 @@ function displayeditprofile(){
     
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="register_email" type="text" placeholder="Email">'
+    Html += '<input id="register_email" type="text" placeholder="Email" value="'+email+'">'
     Html += '</div>'
     Html += '</div>'
     
