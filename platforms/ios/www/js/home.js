@@ -185,23 +185,10 @@ function displayfiltermodel()
     Html += '</div>'
     
     
-    
-    
     Html += '<div class="modal-content filter_modle_content">'
     Html += '<ul class="collapsible" data-collapsible="accordion">'
-
-    Html +=  displayToggleOption();
-    Html +=  displayRadioOption();
-    Html +=  displayCheckboxOption();
-    Html +=  displaySwitchOption();
-    Html +=  displaysliderOption();
-
     
-    Html += '<li>'
-    Html += '<div class="collapsible-header">Third</div>'
-    Html += '<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>'
-    Html += '</li>'
-    
+    Html +=  displayToggleOption('Sort By','sort_by');
     
     Html += '</ul>'
     Html += '</div>'
@@ -211,18 +198,24 @@ function displayfiltermodel()
 
 
 
-function displayToggleOption()
+function displayToggleOption(header_name,header_id)
 {
     var Html = "";
     Html += '<li>'
-    Html += '<div class="collapsible-header " onclick="selecttoggle()" >Sort by</div>'
+    Html += '<div class="collapsible-header " onclick="selecttoggle()" >'+header_name+'</div>'
     Html += '<div class="collapsible-body">'
     
     Html += '<div class="row">'
     Html += '<div class="col s12">'
-    Html += '<ul class="tabs refine_Sort_by">'
-    Html += '<li  class="tab col s6"><a id="Newly_added" >Newly added</a></li>'
-    Html += '<li  class="tab col s6"><a id="Alphabatically">Alphabatically</a></li>'
+    Html += '<ul class="tabs refine_'+header_id+'">'
+    
+    var number_of_divs = 12/(filter_json_sort_by.jsonFormat.length);
+//onclick="setItemlocalStorage(\''+header_id+'\',\''+filter_json_sort_by.jsonFormat[j].id+'\')"
+    
+    for(var j=0;j<filter_json_sort_by.jsonFormat.length;j++){
+        Html += '<li   class="tab col s'+number_of_divs+'"><a id="'+filter_json_sort_by.jsonFormat[j].id+'"  >'+filter_json_sort_by.jsonFormat[j].name+'</a></li>'
+    }
+
     Html += '</ul>'
     Html += '</div>'
     Html += '</div>'
@@ -232,6 +225,56 @@ function displayToggleOption()
     return Html;
 
 }
+
+
+
+
+
+function applyfilter(header_name,header_id)
+{
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function displayRadioOption()
 {
@@ -276,12 +319,12 @@ function displayCheckboxOption()
     Html += '<div class="col s12">'
     
     Html += '<p>'
-    Html += '<input type="checkbox" id="test5" />'
-    Html += '<label for="test5">Red</label>'
+    Html += '<input type="checkbox" class="filled-in" id="filled-in-box-1"/>'
+    Html += '<label for="filled-in-box-1">Filled in</label>'
     Html += '</p>'
     Html += '<p>'
-    Html += '<input type="checkbox" id="test6" checked="checked" />'
-    Html += '<label for="test6">Yellow</label>'
+    Html += '<input type="checkbox" class="filled-in" id="filled-in-box-2" />'
+    Html += '<label for="filled-in-box-2">Filled in</label>'
     Html += '</p>'
 
     Html += '</div>'
@@ -306,10 +349,10 @@ function displaySwitchOption()
     
     Html += '<div class="switch">'
     Html += '<label>'
-    Html += 'Off'
+//    Html += 'Off'
     Html += '<input type="checkbox">'
     Html += '<span class="lever"></span>'
-    Html += 'On'
+//    Html += 'On'
     Html += '</label>'
     Html += '</div>'
 
@@ -328,7 +371,7 @@ function displaysliderOption()
 {
     var Html = "";
     Html += '<li>'
-    Html += '<div class="collapsible-header " onclick="noUiSlider()" >radio options</div>'
+    Html += '<div class="collapsible-header " onclick="noUiSlider()" >price slider</div>'
     Html += '<div class="collapsible-body">'
     
     Html += '<div class="row">'
@@ -345,4 +388,9 @@ function displaysliderOption()
     
 }
 
+//    Html +=  displayToggleOption();
+//    Html +=  displayRadioOption();
+//    Html +=  displayCheckboxOption();
+//    Html +=  displaySwitchOption();
+//    Html +=  displaysliderOption();
 

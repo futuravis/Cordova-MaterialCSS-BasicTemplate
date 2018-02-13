@@ -95,12 +95,37 @@ function clearpage(){
     $('#myaccount').hide();
 }
 
+
+function getItemlocalStorage(param){
+    var value = localStorage.getItem(param)
+    return value;
+}
+function setItemlocalStorage(param,value){
+    var value = localStorage.setItem(param,value)
+}
+
+
 function selecttoggle()
 {
     window.setTimeout(function() {
-                      $( "#Newly_added" ).click();
+                      if(localStorage.getItem("sort_by") == "newest" || localStorage.getItem("sort_by") == null){
+                      $( "#newest" ).click();
+                      }
+                      else if(localStorage.getItem("sort_by") == "Price_Ascending"){
+                      $( "#Price_Ascending" ).click();
+                      }
+                      else if(localStorage.getItem("sort_by") == "Price_Descending"){
+                      $( "#Price_Descending" ).click();
+                      }
+                      
                       }, 200);
+    
+    
+    
 }
+
+
+
 function noUiSlider()
 {
                       var slider = $("#test-slider");

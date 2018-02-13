@@ -93,3 +93,58 @@ var Content_json = {
                    ]
 }
 
+
+
+
+
+
+
+
+
+//////////filter part
+var json_filter_by_newest = {
+    "id": "newest",
+    "name": "newest",
+    "value": "DATE",
+}
+
+var json_filter_by_Price_Ascending = {
+    "id": "Price_Ascending",
+    "name": "Price Ascending",
+    "value": "P-ASC",
+}
+
+var json_filter_by_Price_Descending = {
+    "id": "Price_Descending",
+    "name": "Price Descending",
+    "value": "P-DESC",
+}
+
+
+
+var filter_json_sort_by = {
+    "jsonFormat": [
+                   json_filter_by_newest,
+                   json_filter_by_Price_Ascending,
+                   json_filter_by_Price_Descending,
+                   ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
