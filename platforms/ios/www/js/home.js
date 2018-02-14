@@ -97,19 +97,21 @@ function displayHeader()
     html += '</div>'
     
     html += '</div>'
-    html += '<div class="row ">'
+    html += '<div class="row allcat_text"><span>All categories</span>'
     
-    html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
+   // html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
+    //html += '</div>'
+    
+    
+    //html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
+   // html += '<a class="waves-effect modal-trigger" href="#Refinemodel"><img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
+    //html += '</div>'
+    
+    
+    html += '</div>'
     html += '</div>'
     
     
-    html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
-    html += '<a class="waves-effect modal-trigger" href="#Refinemodel"><img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
-    html += '</div>'
-    
-    
-    html += '</div>'
-    html += '</div>'
     return html;
 }
 
@@ -127,8 +129,9 @@ function displayFooter()
     html += '<div>';
     html += '<footer>'
     html += '<div class="row fixed_footer_row">'
+    var width = 100/Footter_home_icons.jsonFormat.length;
     for(var j=0;j<Footter_home_icons.jsonFormat.length;j++){
-        html += '<div class="col s3 fixed_footer_col waves-effect waves-light" onclick="'+Footter_home_icons.jsonFormat[j].method+'">'
+        html += '<div style="width:'+Math.round(width)+'%" class="col s3 fixed_footer_col waves-effect waves-light" onclick="'+Footter_home_icons.jsonFormat[j].method+'">'
         html += '<div class="row fixed_footer_icon_row">'
         html += '<img class="fixed_footer_image" src="'+Footter_home_icons.jsonFormat[j].symbol+'">'
         html += '</div>'
@@ -149,6 +152,9 @@ function displayContent(Content_json)
     Html += '<div class="content content_div">'
     
     
+    Html += '<div><img src="img/home_blur.jpg" style=" height: 200px; width: 100%"/></div>'
+    
+    
     for(var j=0;j<Content_json.result.length;j++){
         Html += '<div class="col s12">'
         Html += '<div class="card horizontal z-depth-4">'
@@ -167,6 +173,7 @@ function displayContent(Content_json)
         Html += '</div>'
         Html += '</div>'
     }
+    Html += '<div style="height:60px;"></div>'
     Html += '</div>'
     $('#homeList').html(Html);
     

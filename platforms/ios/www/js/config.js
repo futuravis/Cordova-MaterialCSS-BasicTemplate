@@ -75,7 +75,7 @@ var header_home_icons = {
 var Footter_home_icons = {
     "jsonFormat": [
                    json_Home,
-                   json_Categories,
+                   //json_Categories,
                    json_Search,
                    json_My_Account,
                    ]
