@@ -157,6 +157,7 @@ function displayeditprofile(email,contact,username){
 
 
 
+<<<<<<< HEAD
 function UpdateAccount(){
     
     var username = $('#register_username').val();
@@ -164,6 +165,8 @@ function UpdateAccount(){
     var contact = $('#register_contact').val();
 
 }
+=======
+>>>>>>> 5bb73c456bd4d6250470bac3a836d72ccd9230c3
 
 
 

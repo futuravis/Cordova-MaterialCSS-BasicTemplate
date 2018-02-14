@@ -32,16 +32,10 @@ function displayHomePage()
                                         }
                                         );
                       $('.collapsible').collapsible();
+                      $('ul.tabs').tabs();
+                      
 
 
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       
                       
                       
@@ -184,28 +178,63 @@ function displayContent(Content_json)
 function displayfiltermodel()
 {
     var Html = "";
+    
+    //Header model
     Html += '<div class="modal-footer ">'
     Html += '<a href="#!" class="modal-action modal-close waves-effect font_size_16 App_text_color Bold_text btn-flat ">Apply</a>'
     Html += '</div>'
     
+    
     Html += '<div class="modal-content filter_modle_content">'
-    
     Html += '<ul class="collapsible" data-collapsible="accordion">'
-    Html += '<li>'
-    Html += '<div class="collapsible-header">Sort by</div>'
-    Html += '<div class="collapsible-body">'
     
-    Html += '</div>'
-    Html += '</li>'
-    Html += '<li>'
-    Html += '<div class="collapsible-header">Third</div>'
-    Html += '<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>'
-    Html += '</li>'
+    Html +=  displayToggleOption('Sort By','sort_by');
+    
     Html += '</ul>'
-
     Html += '</div>'
     
     return Html;
+}
+
+
+
+function displayToggleOption(header_name,header_id)
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="selecttoggle()" >'+header_name+'</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    Html += '<ul class="tabs refine_'+header_id+'">'
+    
+    var number_of_divs = 12/(filter_json_sort_by.jsonFormat.length);
+//onclick="setItemlocalStorage(\''+header_id+'\',\''+filter_json_sort_by.jsonFormat[j].id+'\')"
+    
+    for(var j=0;j<filter_json_sort_by.jsonFormat.length;j++){
+        Html += '<li   class="tab col s'+number_of_divs+'"><a id="'+filter_json_sort_by.jsonFormat[j].id+'"  >'+filter_json_sort_by.jsonFormat[j].name+'</a></li>'
+    }
+
+    Html += '</ul>'
+    Html += '</div>'
+    Html += '</div>'
+
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+
+}
+
+
+
+
+
+function applyfilter(header_name,header_id)
+{
+
+    
+    
 }
 
 
@@ -214,4 +243,154 @@ function displayfiltermodel()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function displayRadioOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="" >radio options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<p>'
+    Html += '<input class="with-gap" name="group1" type="radio" id="test1" />'
+    Html += '<label for="test1">Red</label>'
+    Html += '</p>'
+    
+    Html += '<p>'
+    Html += '<input class="with-gap" name="group1" type="radio" id="test2" />'
+    Html += '<label for="test2">Yellow</label>'
+    Html += '</p>'
+    
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
+
+
+
+
+function displayCheckboxOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="" >checkbox options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<p>'
+    Html += '<input type="checkbox" class="filled-in" id="filled-in-box-1"/>'
+    Html += '<label for="filled-in-box-1">Filled in</label>'
+    Html += '</p>'
+    Html += '<p>'
+    Html += '<input type="checkbox" class="filled-in" id="filled-in-box-2" />'
+    Html += '<label for="filled-in-box-2">Filled in</label>'
+    Html += '</p>'
+
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
+
+
+function displaySwitchOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="" >switch options</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<div class="switch">'
+    Html += '<label>'
+//    Html += 'Off'
+    Html += '<input type="checkbox">'
+    Html += '<span class="lever"></span>'
+//    Html += 'On'
+    Html += '</label>'
+    Html += '</div>'
+
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
+
+
+
+function displaysliderOption()
+{
+    var Html = "";
+    Html += '<li>'
+    Html += '<div class="collapsible-header " onclick="noUiSlider()" >price slider</div>'
+    Html += '<div class="collapsible-body">'
+    
+    Html += '<div class="row">'
+    Html += '<div class="col s12">'
+    
+    Html += '<div id="test-slider"></div>'
+
+    Html += '</div>'
+    Html += '</div>'
+    
+    Html += '</div>'
+    Html += '</li>'
+    return Html;
+    
+}
+
+//    Html +=  displayToggleOption();
+//    Html +=  displayRadioOption();
+//    Html +=  displayCheckboxOption();
+//    Html +=  displaySwitchOption();
+//    Html +=  displaysliderOption();
 
