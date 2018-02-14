@@ -81,7 +81,7 @@ function displayMyaccounset(result){
     html += '</div>'
     
     html += '<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">'
-    html += '<a class="btn btn-floating btn-large App_color waves-effect waves-light" onclick="displayeditprofile("'+result.info.email+'","'+result.info.contact+'")">'
+    html += '<a class="btn btn-floating btn-large App_color waves-effect waves-light" onclick="displayeditprofile(\''+result.info.email+'\',\''+result.info.contact+'\',\''+result.info.username+'\')">'
     html += '<i class="material-icons "><img class="profile_edit_img" src="img/edit.png" /></i>'
     html += '</a>'
     html += '</div>'
@@ -97,7 +97,7 @@ function displayMyaccounset(result){
 
 
 
-function displayeditprofile(email,conytact){
+function displayeditprofile(email,contact,username){
     $('#myaccount').hide();
     $('#editprofile').show();
     slide_page('front','editprofile')
@@ -114,7 +114,7 @@ function displayeditprofile(email,conytact){
     
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="register_username" type="text" placeholder="username">'
+    Html += '<input id="register_username" type="text" placeholder="username" value="'+username+'">'
     Html += '</div>'
     Html += '</div>'
     
@@ -124,15 +124,15 @@ function displayeditprofile(email,conytact){
     Html += '</div>'
     Html += '</div>'
     
-    Html += '<div class="row">'
-    Html += '<div class="input-field col s12">'
-    Html += '<input id="register_Password" type="password" placeholder="Password">'
-    Html += '</div>'
-    Html += '</div>'
+//    Html += '<div class="row">'
+//    Html += '<div class="input-field col s12">'
+//    Html += '<input id="register_Password" type="password" placeholder="Password">'
+//    Html += '</div>'
+//    Html += '</div>'
     
     Html += '<div class="row">'
     Html += '<div class="input-field col s12">'
-    Html += '<input id="register_contact" type="text" placeholder="contact">'
+    Html += '<input id="register_contact" type="text" placeholder="contact" value="'+contact+'">'
     Html += '</div>'
     Html += '</div>'
     
@@ -159,6 +159,9 @@ function displayeditprofile(email,conytact){
 
 function UpdateAccount(){
     
+    var username = $('#register_username').val();
+    var email = $('#register_email').val();
+    var contact = $('#register_contact').val();
 
 }
 
