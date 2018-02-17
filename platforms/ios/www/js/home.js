@@ -1,5 +1,7 @@
 function displayHomePage()
 {
+    $('.page_roll').hide();
+    
     var Html = '';
     Html += '<form>';
     Html += displayHeader();
@@ -92,12 +94,14 @@ function displayHeader()
     html += '</div>'
 
     html += '<div class="col s3 fixed_header_col">'
+    
     html += '<div class="row fixed_header_row">'
-    html += '<div class="col s8 fixed_header_col header_add_text center-align">'+header_home_icons.jsonFormat[1].name+'</div>'
-    html += '<div class="col s4 fixed_header_col position_relative">'
+//    html += '<div class="col s8 fixed_header_col header_add_text center-align">'+header_home_icons.jsonFormat[1].name+'</div>'
+    html += '<div class="col s12 fixed_header_col position_relative">'
     html += '<img class="header_add_img button-collapse" src="'+header_home_icons.jsonFormat[1].symbol+'">'
     html += '</div>'
     html += '</div>'
+    
     html += '</div>'
 
     html += '</div>'

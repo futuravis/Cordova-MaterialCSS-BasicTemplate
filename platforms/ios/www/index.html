@@ -23,7 +23,13 @@
         <script type="text/javascript" src='js/appmodules.js'></script>
         <script type="text/javascript" src='js/login.js'></script>
         <script type="text/javascript" src='js/home.js'></script>
+        <script type="text/javascript" src='js/postad.js'></script>
         <script type="text/javascript" src='js/myaccount.js'></script>
+        <script type="text/javascript" src='js/mymessage.js'></script>
+        <script type="text/javascript" src='js/myfavorite.js'></script>
+        <script type="text/javascript" src='js/myads.js'></script>
+        <script type="text/javascript" src='js/settings.js'></script>
+        <script type="text/javascript" src='js/help.js'></script>
 
 
     
@@ -57,31 +63,58 @@
         <div id="login" class="login page_roll" ></div>
         <div id="register" class="register page_roll" ></div>
         <div id="home" class="home page_roll" ></div>
+        <div id="postad" class="postad page_roll" ></div>
         <div id="myaccount" class="myaccount page_roll" ></div>
         <div id="editprofile" class="editprofile page_roll" ></div>
+        <div id="mymessage" class="mymessage page_roll" ></div>
+        <div id="myads" class="myads page_roll" ></div>
+        <div id="myfavorite" class="myfavorite page_roll" ></div>
+        <div id="settings" class="settings page_roll" ></div>
+        <div id="help" class="help page_roll" ></div>
         <div id="Refinemodel" class="modal bottom-sheet filter_modle"></div>
 
 
 <ul id="slide-out" class="side-nav" style="z-index: 999999;">
     <ul style=" margin-top: 100px">
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/home_menu.png"/></span><span>Home page</span></a></li>
+        <li><a onclick="hideSidePanal()" href=""><span class="menu_span"><img style=" width: 25px" src="img/home_menu.png"/></span><span>Home page</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/ad.png"/></span><span>Posd AD</span></a></li>
+        <li><a onclick="displayPosdAD()" ><span class="menu_span"><img style=" width: 25px" src="img/ad.png"/></span><span>Posd AD</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/myacc.png"/></span><span>My Account</span></a></li>
+        <li><a onclick="displayMyaccount();"><span class="menu_span"><img style=" width: 25px" src="img/myacc.png"/></span><span>My Account</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/message.png"/></span><span>My Message</span></a></li>
+        <li><a onclick="displayMyMessage();" ><span class="menu_span"><img style=" width: 25px" src="img/message.png"/></span><span>My Message</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/ad.png"/></span><span>My Ads</span></a></li>
+        <li><a onclick="displayMyAds();"><span class="menu_span"><img style=" width: 25px" src="img/ad.png"/></span><span>My Ads</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/favorite.png"/></span><span>My Favorite</span></a></li>
+        <li><a onclick="displayMyFavorite();"><span class="menu_span"><img style=" width: 25px" src="img/favorite.png"/></span><span>My Favorite</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/setting.png"/></span><span>Settingds</span></a></li>
+        <li><a onclick="displaysettings();"><span class="menu_span"><img style=" width: 25px" src="img/setting.png"/></span><span>Settings</span></a></li>
+        
         <li><div class="divider"></div></li>
-        <li><a href="#!"><span class="menu_span"><img style=" width: 25px" src="img/help.png"/></span><span>Help</span></a></li>
+        <li><a onclick="displayHelp();"><span class="menu_span"><img style=" width: 25px" src="img/help.png"/></span><span>Help</span></a></li>
 
     </ul>
 </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </body>

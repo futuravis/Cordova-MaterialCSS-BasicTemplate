@@ -56,6 +56,7 @@ function backHeader(text,prevpage){
         html += '<div class="profile_logout" onclick="doLogout();"><img src="img/logout.png" width="30"/></div>'
         html += '</div>'
     }
+
     html += '</div>'
     return html;
 }
@@ -74,8 +75,9 @@ function goBack(page){
         $('#myaccount').show();
         slide_page('left','myaccount')
         callProfileApi()
-
     }
+
+    
     
 }
 
@@ -103,6 +105,17 @@ function getItemlocalStorage(param){
 function setItemlocalStorage(param,value){
     var value = localStorage.setItem(param,value)
 }
+
+function hideSidePanal()
+{
+    $('.button-collapse').sideNav('hide');
+}
+
+
+
+
+
+
 
 
 function selecttoggle()

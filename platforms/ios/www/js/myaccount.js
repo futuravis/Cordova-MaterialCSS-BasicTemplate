@@ -1,5 +1,7 @@
 function displayMyaccount(){
     $('#home').hide();
+    $('.button-collapse').sideNav('hide');
+    
     $('#myaccount').show();
     slide_page('front','myaccount')
     callProfileApi()
