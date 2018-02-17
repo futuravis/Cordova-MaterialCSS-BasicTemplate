@@ -43,6 +43,7 @@ function displayHomePage()
                       $('#home').append(Html).trigger('create');
                       $('#home').css("display","block");
                       window.location.href = '#home';
+                      $(".button-collapse").sideNav();
                       }, 200);
 }
 
@@ -69,42 +70,45 @@ function CallhomeAPI(){
     
 }
 
-
-
 function displayHeader()
 {
     $('#myaccount').hide();
     $('#login').hide();
     var html = "";
+    
+
+    
     html += '<div class="header home_header sticky_header" id="myHeader">'
     html += '<div class="row fixed_header_row">'
-    
+
     //Create the add
     html += '<div class="col s3 center-align fixed_header_col">'
-    html += '<img class="header_log_img" src="'+header_home_icons.jsonFormat[0].symbol+'">'
+    html += '<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons"><img style=" width: 50px" src="img/menu_bar.png"/></i></a>'
+    html += '<img class="header_log_img" src="img/logo.png">'
+
     html += '</div>'
-    
+
     html += '<div class="col s6 fixed_header_col">'
     html += '</div>'
-    
+
     html += '<div class="col s3 fixed_header_col">'
     html += '<div class="row fixed_header_row">'
     html += '<div class="col s8 fixed_header_col header_add_text center-align">'+header_home_icons.jsonFormat[1].name+'</div>'
     html += '<div class="col s4 fixed_header_col position_relative">'
-    html += '<img class="header_add_img" src="'+header_home_icons.jsonFormat[1].symbol+'">'
+    html += '<img class="header_add_img button-collapse" src="'+header_home_icons.jsonFormat[1].symbol+'">'
     html += '</div>'
     html += '</div>'
     html += '</div>'
-    
+
     html += '</div>'
     html += '<div class="row allcat_text"><span>All categories</span>'
     
-   // html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
+    //html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
     //html += '</div>'
     
     
-    //html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
-   // html += '<a class="waves-effect modal-trigger" href="#Refinemodel"><img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
+   // html += '<div class="col s2 right-align fixed_sub_header_col position_relative">'
+    //html += '<a class="waves-effect modal-trigger" href="#Refinemodel"><img class="header_filter_img" src="'+header_home_icons.jsonFormat[2].symbol+'"></a>'
     //html += '</div>'
     
     

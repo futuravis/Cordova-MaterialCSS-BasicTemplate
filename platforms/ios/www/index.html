@@ -37,6 +37,16 @@
             }else{
                 displayLoginPage();
             }
+            
+            
+            $('.button-collapse').sideNav({
+                                          menuWidth: 260, // Default is 240
+                                          edge: 'left', // Choose the horizontal origin
+                                          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                                          draggable: true // Choose whether you can drag to open on touch screens
+                                          }
+                                          );
+            
         }
 
         </script>
@@ -50,6 +60,11 @@
         <div id="myaccount" class="myaccount page_roll" ></div>
         <div id="editprofile" class="editprofile page_roll" ></div>
         <div id="Refinemodel" class="modal bottom-sheet filter_modle"></div>
+
+
+<ul id="slide-out" class="side-nav" style="z-index: 999999;">
+    
+</ul>
 
 
     </body>
