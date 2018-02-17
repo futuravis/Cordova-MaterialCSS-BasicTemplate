@@ -239,3 +239,10 @@ margin-top: 70px;
     font-size: 20px
 }
 
+.menu_span{
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    float: left
+}
+
