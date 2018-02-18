@@ -61,12 +61,12 @@ function backHeader(text,prevpage){
     return html;
 }
 
-function goBack(page){
+function goBack(page,id){
 
     if(page == "home")
     {
         slide_page('slide',page);
-        displayHomePage();
+        displayHomePage(id);
     }
     else if(page == "myaccount")
     {

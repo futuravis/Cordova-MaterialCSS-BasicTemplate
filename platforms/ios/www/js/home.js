@@ -1,4 +1,4 @@
-function displayHomePage()
+function displayHomePage(id)
 {
     $('.page_roll').hide();
     
@@ -9,7 +9,7 @@ function displayHomePage()
     Html += displayFooter();
     Html += '</form>';
     
-    CallhomeAPI();
+    CallhomeAPI(id);
     
     var filter_model_html = "";
     filter_model_html = displayfiltermodel();
@@ -50,14 +50,22 @@ function displayHomePage()
 }
 
 
-function CallhomeAPI(){
+function CallhomeAPI(catId){
+    var cat_Id='';
+    if(!catId){
+        cat_Id = 0
+    }else{
+        cat_Id =catId
+    }
+    
+   // alert(cat_Id)
     
     $.ajax({
            type : "POST",
            crossDomain: true,
            url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/ads/list",
            beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
-           data: { "cat_id" : "0", "area_id" : "1"},
+           data: { "cat_id" : cat_Id, "area_id" : "1"},
            dataType: "json",
            success : function(result) {
            //alert(JSON.stringify(result))
@@ -76,6 +84,8 @@ function displayHeader()
 {
     $('#myaccount').hide();
     $('#login').hide();
+    $('#category').hide();
+    
     var html = "";
     
 
@@ -105,7 +115,7 @@ function displayHeader()
     html += '</div>'
 
     html += '</div>'
-    html += '<div class="row allcat_text"><span>All categories</span>'
+    html += '<div class="row allcat_text"><span onclick="displayCatpage();">All categories</span>'
     
     //html += '<div class="col s10 right-align fixed_sub_header_col header_add_text" style=" color: #000000; font-weight: normal; font-size: 18px;">Filter'
     //html += '</div>'
