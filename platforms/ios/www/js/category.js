@@ -47,7 +47,7 @@ function displaycatListview(Content_json){
     html+= '<ul class="collection with-header" style=" margin-top: 55px">'
     
     for(var j=0;j<Content_json.result.length;j++){
-    html+= '<li class="collection-item"><div id="'+Content_json.result[j].id+'" onclick="renderHomepage(this.id)" style=" font-size: 16px">'+Content_json.result[j].title+'<span style=" float: right"><i class="material-icons">chevron_right</i></span></div></li>'
+    html+= '<li class="collection-item"><div id="'+Content_json.result[j].id+'" onclick="renderHomepage(this.id)" style=" font-size: 16px" q>'+Content_json.result[j].title+'<span style=" float: right"><i class="material-icons">chevron_right</i></span></div></li>'
         
         
     }
