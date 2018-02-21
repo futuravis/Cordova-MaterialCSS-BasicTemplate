@@ -246,3 +246,11 @@ margin-top: 70px;
     float: left
 }
 
+.preLoader{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 999999;
+    display:none;
+}
+

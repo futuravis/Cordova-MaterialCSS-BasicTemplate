@@ -18,10 +18,12 @@ function displayCatpage(){
 
 function callcatAPI(){
     
+        var selLangulage = localStorage.getItem('selLangulage');
+    
     $.ajax({
            type : "GET",
            crossDomain: true,
-           url : "https://tlgrmapp.com/apps/dev/classified/index.php/api/cats/list/lang/en/parent",
+           url : 'https://tlgrmapp.com/apps/dev/classified/index.php/api/cats/list/lang/'+selLangulage+'/parent',
            beforeSend: function(xhr){xhr.setRequestHeader('X-API-KEY', '1741B791EB86DF69C5A4338444AF5');},
           // data: { "cat_id" : "0", "area_id" : "1"},
            dataType: "json",

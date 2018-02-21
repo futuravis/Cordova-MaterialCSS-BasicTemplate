@@ -41,6 +41,8 @@
         function onDeviceReady(){
             var userId = localStorage.getItem("userid");
             if(userId > 0){
+                localStorage.setItem("selLangulage","en");
+
                displayHomePage();
             }else{
                 displayLoginPage();
@@ -75,7 +77,9 @@
         <div id="help" class="help page_roll" ></div>
         <div id="Refinemodel" class="modal bottom-sheet filter_modle"></div>
         <div id="category" class="help page_roll" ></div>
+        <div id="language" class="help page_roll" ></div>
 
+<div class="preLoader"><img src="img/loader.gif"/></div>
 
 <ul id="slide-out" class="side-nav" style="z-index: 999999;">
     <ul style=" margin-top: 100px">

@@ -161,6 +161,12 @@ function noUiSlider()
 
 
 
+function showloader(){
+    $('.preLoader').show();
+}
 
+function hideloader(){
+    $('.preLoader').hide();
+}
 
 
