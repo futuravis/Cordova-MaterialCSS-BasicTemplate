@@ -8,9 +8,9 @@ function displaysettings(){
     var Html= '';
     Html+= backHeader('Settings','home');
     Html+= '<ul class="collection with-header" style=" margin-top: 50px">'
-    Html+= '<li class="collection-item"><div>Language<a onclick="DisplayLanguage();" class="secondary-content"><i class="material-icons">send</i></a></div></li>'
-    Html+= '<li class="collection-item"><div>About App<a onclick="" class="secondary-content"><i class="material-icons">send</i></a></div></li>'
-    Html+= '<li class="collection-item"><div>Terms And Condition<a onclick="" class="secondary-content"><i class="material-icons">send</i></a></div></li>'
+    Html+= '<li class="collection-item"><div>Language<a onclick="DisplayLanguage();" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a></div></li>'
+    Html+= '<li class="collection-item"><div>About App<a onclick="" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a></div></li>'
+    Html+= '<li class="collection-item"><div>Terms And Condition<a onclick="" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a></div></li>'
     Html+= '</ul>'
 
     
@@ -29,9 +29,9 @@ function DisplayLanguage(){
     
 Html+= '<div style=" margin-top: 60px">'
     Html+= '<ul class="collection with-header" style=" margin-top: 50px">'
-    Html+= '<li class="collection-item"><div>English<div style=" float: right"><input onclick="changeLang(this.id);" class="with-gap" name="group1" type="radio" id="eng" /><label for="eng"></label></div></div></li>'
-    Html+= '<li class="collection-item"><div>Turkish<div style=" float: right"><input onclick="changeLang(this.id);" class="with-gap" name="group1" type="radio" id="tur" /><label for="tur"></label></div></div></li>'
-    Html+= '<li class="collection-item"><div>Persian<div style=" float: right"><input onclick="changeLang(this.id);" class="with-gap" name="group1" type="radio" id="per" /><label for="per"></label></div></div></li>'
+    Html+= '<li class="collection-item"><div><span style=" float: left ; padding-right:10px"><img src="img/united-kingdom.png"/></span>English<div style=" float: right"><input onclick="changeLang(this.id);" class="with-gap" name="group1" type="radio" id="eng" /><label for="eng"></label></div></div></li>'
+    Html+= '<li class="collection-item"><div><span style=" float: left ; padding-right:10px"><img src="img/turkey.png"/></span>Turkish<div style=" float: right"><input onclick="changeLang(this.id);" class="with-gap" name="group1" type="radio" id="tur" /><label for="tur"></label></div></div></li>'
+    Html+= '<li class="collection-item"><div><span style=" float: left ; padding-right:10px"><img src="img/iran.png"/></span>Persian<div style=" float: right"><input onclick="changeLang(this.id);" class="with-gap" name="group1" type="radio" id="per" /><label for="per"></label></div></div></li>'
 
     Html+= '</ul>'
 
