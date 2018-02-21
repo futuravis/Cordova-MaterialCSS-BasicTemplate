@@ -19,4 +19,3 @@ function displaysettings(){
                       $('#settings').html(Html)
                       }, 200);
 }
-
