@@ -51,6 +51,7 @@ function displayHomePage(id)
 
 
 function CallhomeAPI(catId){
+    showloader()
     var cat_Id='';
     if(!catId){
         cat_Id = 0
@@ -174,6 +175,8 @@ function displayContent(Content_json)
     
     
     for(var j=0;j<Content_json.result.length;j++){
+        
+        
         Html += '<div class="col s12">'
         Html += '<div class="card horizontal z-depth-4">'
         Html += '<div class="card-image">'
@@ -195,7 +198,7 @@ function displayContent(Content_json)
     Html += '</div>'
     $('#homeList').html(Html);
     
-    
+    hideloader();
     //return Html;
 }
 
@@ -220,6 +223,8 @@ function displayfiltermodel()
     
     return Html;
 }
+
+
 
 
 
