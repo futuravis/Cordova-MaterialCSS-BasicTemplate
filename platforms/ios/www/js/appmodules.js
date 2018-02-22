@@ -109,6 +109,7 @@ function setItemlocalStorage(param,value){
 function hideSidePanal()
 {
     $('.button-collapse').sideNav('hide');
+    
 }
 
 

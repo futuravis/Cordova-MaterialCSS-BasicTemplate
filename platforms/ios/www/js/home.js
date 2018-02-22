@@ -1,5 +1,6 @@
 function displayHomePage(id)
 {
+    
     $('.page_roll').hide();
     
     var Html = '';
