@@ -76,6 +76,13 @@ function goBack(page,id){
         slide_page('left','myaccount')
         callProfileApi()
     }
+    else if(page == "category")
+    {
+        //displayMyaccount();
+        $('.page_roll').hide();
+        $('#category').show();
+        slide_page('left','category')
+    }
 
     
     

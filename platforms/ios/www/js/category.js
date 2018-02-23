@@ -12,8 +12,6 @@ function displayCatpage(){
     window.setTimeout(function(){
                       $('#category').html(Html)
                       }, 200);
-
-    
 }
 
 function callcatAPI(){
@@ -49,9 +47,7 @@ function displaycatListview(Content_json){
     html+= '<ul class="collection with-header" style=" margin-top: 55px">'
     
     for(var j=0;j<Content_json.result.length;j++){
-    html+= '<li class="collection-item"><div id="'+Content_json.result[j].id+'" onclick="renderHomepage(this.id)" style=" font-size: 16px" q>'+Content_json.result[j].title+'<span style=" float: right"><i class="material-icons">chevron_right</i></span></div></li>'
-        
-        
+    html+= '<li class="collection-item"><div id="'+Content_json.result[j].id+'" onclick="displaysubCatpage(this.id)" style=" font-size: 16px" q>'+Content_json.result[j].title+'<span style=" float: right"><i class="material-icons">chevron_right</i></span></div></li>'
     }
     html+= '</ul>'
 //alert(Html)
@@ -59,15 +55,9 @@ function displaycatListview(Content_json){
     window.setTimeout(function(){
                       $('#allcat').html(html);
                       }, 300);
-    
-    
-    
 }
 
 
-function renderHomepage(id){
-    goBack('home',id);
-   // alert(id)
-    //displayHomePage(id)
-    
-}
+
+
+
