@@ -84,7 +84,7 @@ function AboutApp(){
     Html+= '<div class="col s12 m5">'
     Html+= '<div class="card-panel center-align" style=" height: 600px; ">'
     Html+= '<span class="white-text">'
-    Html += '<img class="header_log_img" src="img/logo.png" style=" left: 30%;">'
+    Html += '<img class="" src="img/logo2.png" style=" ">'
     Html+= '</span>'
     
     Html+= '<div class="card-content" style=" padding-top: 100px;">'

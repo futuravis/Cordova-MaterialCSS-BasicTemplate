@@ -40,9 +40,9 @@
         document.addEventListener("deviceready", onDeviceReady, false);
         
         function onDeviceReady(){
+            localStorage.setItem("selLangulage","en");
             var userId = localStorage.getItem("userid");
             if(userId > 0){
-                localStorage.setItem("selLangulage","en");
 
                displayHomePage();
             }else{
@@ -82,7 +82,7 @@
         <div id="language" class="language page_roll" ></div>
         <div id="aboutapp" class="aboutapp page_roll" ></div>
 
-<div class="preLoader"><img src="img/loader.gif"/></div>
+<div class="preLoader"><img src="img/loader.gif" style=" width: 45px"/></div>
 
 <ul id="slide-out" class="side-nav" style="z-index: 999999;">
     <ul style=" margin-top: 100px">

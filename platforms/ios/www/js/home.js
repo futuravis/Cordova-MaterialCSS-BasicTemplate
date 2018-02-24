@@ -1,6 +1,5 @@
 function displayHomePage(id)
 {
-    alert(id)
     $('.page_roll').hide();
     
     var Html = '';
@@ -60,7 +59,6 @@ function CallhomeAPI(catId){
         cat_Id =catId
     }
     
-   // alert(cat_Id)
     
     $.ajax({
            type : "POST",
@@ -75,7 +73,8 @@ function CallhomeAPI(catId){
            displayContent(result)
            },
            error : function(result) {
-           console.log("call Failed");
+           hideloader();
+           console.log("Home call Failed");
            //handle the error
            }
            });
@@ -198,7 +197,7 @@ function displayContent(Content_json)
     Html += '<div style="height:60px;"></div>'
     Html += '</div>'
     $('#homeList').html(Html);
-    
+
     hideloader();
     //return Html;
 }

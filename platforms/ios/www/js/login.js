@@ -226,6 +226,7 @@ function checkvalidation(){
     }}
 
 function CallloginAPI(email,password){
+    showloader()
     $.ajax({
            type : "POST",
            crossDomain: true,
@@ -239,6 +240,7 @@ function CallloginAPI(email,password){
            Materialize.toast('Login Success', 2000)
            localStorage.setItem("userid", result.user_id);
            slide_page('front','home')
+           hideloader();
            displayHomePage();
            }else{
            Materialize.toast('Login Failed', 2000)
@@ -285,6 +287,7 @@ function register_check_validation(){
 
 
 function CallRegisterAPI(username,password,email,contact){
+    showloader()
     $.ajax({
            type : "POST",
            crossDomain: true,
@@ -297,6 +300,7 @@ function CallRegisterAPI(username,password,email,contact){
            if(result.status == true){
            ///localStorage.setItem("userid", result.user_id);
            slide_page('front','login')
+           hideloader();
            displayLoginPage("Register");
            }
            //set your variable to the result

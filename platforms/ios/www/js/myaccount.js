@@ -8,7 +8,7 @@ function displayMyaccount(){
 }
 
 function callProfileApi(){
- 
+ showloader()
     var userId = localStorage.getItem("userid");
     
     $.ajax({
@@ -20,6 +20,7 @@ function callProfileApi(){
            dataType: "json",
            success : function(result) {
            //$('.profile_name').html(result.username)
+           hideloader();
            displayMyaccounset(result)
            //set your variable to the result
            //displayContent(result)

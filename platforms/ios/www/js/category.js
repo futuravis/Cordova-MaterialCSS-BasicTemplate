@@ -15,7 +15,7 @@ function displayCatpage(){
 }
 
 function callcatAPI(){
-    
+    showloader()
         var selLangulage = localStorage.getItem('selLangulage');
     
     $.ajax({
@@ -28,6 +28,7 @@ function callcatAPI(){
            success : function(result) {
            //alert(JSON.stringify(result))
            displaycatListview(result)
+           hideloader();
            //set your variable to the result
            //displayContent(result)
            },
@@ -47,7 +48,7 @@ function displaycatListview(Content_json){
     html+= '<ul class="collection with-header" style=" margin-top: 55px">'
     
     for(var j=0;j<Content_json.result.length;j++){
-    html+= '<li class="collection-item"><div id="'+Content_json.result[j].id+'" onclick="displaysubCatpage(this.id)" style=" font-size: 16px" q>'+Content_json.result[j].title+'<span style=" float: right"><i class="material-icons">chevron_right</i></span></div></li>'
+    html+= '<li class="collection-item"><div id="'+Content_json.result[j].id+'" onclick="displaysubCatpage(this.id)" style=" font-size: 16px" ><span style=" float: left; margin-left: -15px"><img style=" padding-right: 10px" src="img/category.png" width="35"/></span>'+Content_json.result[j].title+'<span style=" float: right; margin-right: -15px"><i class="material-icons">chevron_right</i></span></div></li>'
     }
     html+= '</ul>'
 //alert(Html)
