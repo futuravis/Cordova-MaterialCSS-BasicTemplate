@@ -1,18 +1,27 @@
 
 function displaysubCatpage(id){
-    $('.page_roll').hide();
-    $('#subcategory').show();
-    slide_page('front','subcategory')
-    //displaysubcatListview();
+//    $('.page_roll').hide();
+//    $('#subcategory').show();
+//    slide_page('front','subcategory')
+//    //displaysubcatListview();
+    
+    //alert(id);
+    CallhomeAPI(id);
     callsubcatApi(id)
-    var Html= '';
-    Html+= backHeader('Sub category','category');
-    Html+= '<div id="allsubcat"></div>'
 
-    window.setTimeout(function(){
-                      $('#subcategory').html(Html);
-                      
-                      }, 200);
+    return;
+    
+    
+    
+    
+//    var Html= '';
+//    Html+= backHeader('Sub category','category');
+//    Html+= '<div id="allsubcat"></div>'
+//
+//    window.setTimeout(function(){
+//                      $('#subcategory').html(Html);
+//
+//                      }, 200);
 }
 
 
@@ -49,22 +58,24 @@ showloader()
 
 function displaysubcatListview(Content_json){
     
-//    var cat1 = {
-//        "id":"cat1",
-//        "title":"subcatatory1",
-//    }
-//    var cat2 = {
-//        "id":"cat2",
-//        "title":"subcatatory2",
-//    }
-//
-//    var Content_json = {
-//        "result": [
-//                   cat1,
-//                   cat2,
-//                   ]
-//    }
+    var html = "";
 
+    
+    for(var j=0;j<Content_json.result.length;j++){
+        html += '<div id="'+Content_json.result[j].id+'" onclick="CallhomeAPI(this.id)" style=" height: 40px; width: 45%; background: #FFFFFF; float: left; margin-left: 10px; margin-top: 20px;"><span style=" display: block; margin-top: 10px; margin-left: 10px; height: 17px; overflow: hidden;">'+Content_json.result[j].title+'</span></div>'
+    }
+    
+    window.setTimeout(function(){
+                      $('.cat_div').html(html);
+                      $('.cat_div').show();
+                      //$('.bannerImg').hide();
+                      }, 300);
+    
+    return;
+
+    
+    
+    
     
     var html = "";
     html+= '<ul class="collection with-header" style=" margin-top: 55px">'

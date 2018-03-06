@@ -1,17 +1,18 @@
 function displayCatpage(){
-    
-    $('.page_roll').hide();
-    $('#category').show();
-    slide_page('front','help')
+    var id = 1
+   // $('.page_roll').hide();
+   // $('#category').show();
+    //slide_page('front','help')
     callcatAPI();
-    var Html= '';
-    Html+= backHeader('category','home');
+     CallhomeAPI(id);
+    //var Html= '';
+    //Html+= backHeader('category','home');
     
-    Html+= '<div id="allcat"></div>'
+    //Html+= '<div id="allcat"></div>'
     
-    window.setTimeout(function(){
-                      $('#category').html(Html)
-                      }, 200);
+//    window.setTimeout(function(){
+//                      $('#category').html(Html)
+//                      }, 200);
 }
 
 function callcatAPI(){
@@ -43,7 +44,23 @@ function callcatAPI(){
 
 function displaycatListview(Content_json){
     
+    
+    
+    
+    
     var html = "";
+    
+    for(var j=0;j<Content_json.result.length;j++){
+        html += '<div id="'+Content_json.result[j].id+'" onclick="displaysubCatpage(this.id)" style=" height: 40px; width: 45%; background: #FFFFFF; float: left; margin-left: 10px; margin-top: 20px;"><span style=" display: block; margin-top: 10px; margin-left: 10px; height: 17px; width: 130px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">'+Content_json.result[j].title+'</span></div>'
+    }
+    
+    window.setTimeout(function(){
+                      $('.cat_div').html(html);
+                      $('.cat_div').show();
+                      $('.bannerImg').hide();
+                      }, 300);
+
+    return;
     
     html+= '<ul class="collection with-header" style=" margin-top: 55px">'
     

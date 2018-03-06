@@ -59,7 +59,7 @@ function CallhomeAPI(catId){
         cat_Id =catId
     }
     
-    
+   // alert(cat_Id);
     $.ajax({
            type : "POST",
            crossDomain: true,
@@ -70,7 +70,14 @@ function CallhomeAPI(catId){
            success : function(result) {
            //alert(JSON.stringify(result))
            //set your variable to the result
+           
+           if(cat_Id == 0){
            displayContent(result)
+           }else{
+           displayHomeContent(result)
+           }
+           
+           
            },
            error : function(result) {
            hideloader();
@@ -88,8 +95,6 @@ function displayHeader()
     $('#category').hide();
     
     var html = "";
-    
-
     
     html += '<div class="header home_header sticky_header" id="myHeader">'
     html += '<div class="row fixed_header_row">'
@@ -162,20 +167,16 @@ function displayFooter()
     return html;
 }
 
-
-
-function displayContent(Content_json)
+function displayHomeContent(Content_json)
 {
-    $('#home').show();
+    $('.homeContentDiv').empty();
+   // return;
     var Html = "";
-    Html += '<div class="content content_div">'
+    Html += '<div class="homeContentDiv">'
     
-    
-    Html += '<div><img src="img/home_blur.jpg" style=" height: 200px; width: 100%"/></div>'
     
     
     for(var j=0;j<Content_json.result.length;j++){
-        
         
         Html += '<div class="col s12">'
         Html += '<div class="card horizontal z-depth-4">'
@@ -194,8 +195,60 @@ function displayContent(Content_json)
         Html += '</div>'
         Html += '</div>'
     }
+    Html += '</div>'
+    $('.homeContentDiv').html(Html);
+    
+    hideloader();
+
+    
+    
+}
+
+function displayContent(Content_json)
+{
+    $('#home').show();
+    var Html = "";
+    Html += '<div class="content content_div">'
+    
+    Html += '<div style="background: #dadada;"><div class="cat_div" style="height: 200px; margin: auto;display:none;overflow: scroll;margin-left: 3%;">'
+
+    Html += '</div></div>'
+    
+    Html += '<div class="bannerImg"><img src="img/home_blur.jpg" style=" height: 250px; width: 100%"/>'
+    Html += '</div>'
+    
+    Html += '<div class="homeContentDiv">'
+    for(var j=0;j<Content_json.result.length;j++){
+        
+        
+        Html += '<div class="col s12">'
+        Html += '<div class="card horizontal z-depth-4">'
+        
+        Html += '<div class="card-image">'
+        Html += '<img style=" padding: 4px; margin-top: 2px" src="'+Content_json.result[j].image_url+'">'
+        Html += '</div>'
+       
+        Html += '<div class="card-stacked">'
+        
+        
+        Html += '<div class="card-content">'
+        Html += '<p>'+Content_json.result[j].title+'</p>'
+        Html += '</div>'
+        
+        
+        Html += '<div class="card-action">'
+        Html += '<div>Price: &#x20ba; '+Content_json.result[j].price+'</div>'
+        Html += '</div>'
+        
+        
+        Html += '</div>'
+        Html += '</div>'
+        Html += '</div>'
+    }
+    Html += '</div>'
     Html += '<div style="height:60px;"></div>'
     Html += '</div>'
+    
     $('#homeList').html(Html);
 
     hideloader();
